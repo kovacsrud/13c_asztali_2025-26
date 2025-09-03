@@ -1,1 +1,1 @@
-# 12c_webprog_2025
+# 13c Asztali -és mobilalkalmazások fejlesztése
