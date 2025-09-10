@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +44,55 @@ namespace WpfMobilok.Views
         private void buttonVissza_Click(object sender, RoutedEventArgs e)
         {
             datagridMobilok.ItemsSource = Mobilok;
+        }
+
+        private void buttonKeres_Click(object sender, RoutedEventArgs e)
+        {
+            var keresettModell = textboxKeresettModell.Text;
+            var result=Mobilok.FindAll(x=>x.Modell.ToLower().Contains(keresettModell.ToLower()));
+
+            if (result.Count > 0)
+            {
+                datagridMobilok.ItemsSource = result;
+            } else
+            {
+                datagridMobilok.ItemsSource= null;
+                MessageBox.Show("Nincs ilyen modell!");
+                datagridMobilok.ItemsSource = Mobilok;
+            }
+        }
+
+        private void buttonMentes_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dialog=new SaveFileDialog();
+            dialog.Filter = ".csv fájlok|*.csv|.txt fájlok|*.txt";
+            if (dialog.ShowDialog()==true)
+            {
+                try
+                {
+                    FileStream fajl = new FileStream(dialog.FileName, FileMode.Create);
+                                        
+
+                    using (StreamWriter writer = new StreamWriter(fajl, Encoding.UTF8))
+                    {
+                        writer.WriteLine("Id;Nev;Gyarto;Modell;Oprendszer;Datum");
+
+                        foreach (var i in datagridMobilok.ItemsSource as List<Mobil>)
+                        {
+                            writer.WriteLine($"{i.Id};{i.Nev};{i.Gyarto};{i.Modell};{i.Oprendszer};{i.Datum}");
+                        }
+                    }
+                                      
+                    
+                    
+                    MessageBox.Show("Fájlba írás kész!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
