@@ -12,7 +12,7 @@ namespace Szinkron
         {
             List<Szinkronhang> szinkronhangok=new List<Szinkronhang>();
 
-
+                
             return szinkronhangok;
 
         }
