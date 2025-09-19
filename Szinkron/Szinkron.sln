@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szinkron", "Szinkron\Szinkron.csproj", "{0BA10CA1-97F8-49C2-A26B-E1A59B99885A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzinkronGUI", "SzinkronGUI\SzinkronGUI.csproj", "{3A13A755-0962-4929-AFC9-FE3E1F663E2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0BA10CA1-97F8-49C2-A26B-E1A59B99885A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BA10CA1-97F8-49C2-A26B-E1A59B99885A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BA10CA1-97F8-49C2-A26B-E1A59B99885A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A13A755-0962-4929-AFC9-FE3E1F663E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A13A755-0962-4929-AFC9-FE3E1F663E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A13A755-0962-4929-AFC9-FE3E1F663E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A13A755-0962-4929-AFC9-FE3E1F663E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
