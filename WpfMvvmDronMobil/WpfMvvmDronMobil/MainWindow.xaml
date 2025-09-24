@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfMvvmDronMobil.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMvvmDronMobil"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Menu FontSize="20">
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Kilépés"/>
+            </MenuItem>
+            <MenuItem Header="Adatok">
+                <MenuItem x:Name="menuitemDronok" Header="Drón adatok" Click="menuitemDronok_Click"/>
+                <MenuItem x:Name="menuitemMobilok" Header="Mobil adatok" Click="menuitemMobilok_Click"/>
+            </MenuItem>
+            
+        </Menu>
+
+    </Grid>
+</Window>
