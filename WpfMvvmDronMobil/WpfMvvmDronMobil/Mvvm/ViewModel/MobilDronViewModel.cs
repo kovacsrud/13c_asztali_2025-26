@@ -6,9 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WpfMvvmDronMobil.Mvvm.Model;
+using PropertyChanged;
 
 namespace WpfMvvmDronMobil.Mvvm.ViewModel
 {
+    [AddINotifyPropertyChangedInterface]
     public class MobilDronViewModel
     {
         public List<Dron> Dronok { get; set; }=new List<Dron>();
