@@ -9,11 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mvvm\ViewModel\" />
-    <Folder Include="Mvvm\View\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
   </ItemGroup>
