@@ -16,8 +16,8 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <DataGrid ItemsSource="{Binding Kutyanevek}" IsReadOnly="True" SelectedItem="{Binding SelectedKutyanev}" ColumnWidth="*" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonUjKutyanev" Content="Új kutyanév" Grid.Row="1" Width="200" Height="30" />
-        <Button x:Name="buttonTorolKutyanev" Content="Törlés" Grid.Row="1" Grid.Column="1" Width="200" Height="30" />
+        <Button x:Name="buttonUjKutyanev" Content="Új kutyanév" Grid.Row="1" Width="200" Height="30" Click="buttonUjKutyanev_Click"/>
+        <Button x:Name="buttonTorolKutyanev" Content="Törlés" Grid.Row="1" Grid.Column="1" Width="200" Height="30" Click="buttonTorolKutyanev_Click"/>
 
     </Grid>
 </Window>

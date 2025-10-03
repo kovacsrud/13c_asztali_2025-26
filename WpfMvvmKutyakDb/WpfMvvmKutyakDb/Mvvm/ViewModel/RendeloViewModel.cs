@@ -33,5 +33,25 @@ namespace WpfMvvmKutyakDb.Mvvm.ViewModel
                 DbRepo.UjKutyanev(kutyanev);
             }
         }
+
+        public void ModositKutyanev(Kutyanev kutyanev)
+        {
+            var valasz = MessageBox.Show("Biztosan módosítja?", "Módosítás", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz == MessageBoxResult.OK)
+            {
+                DbRepo.ModositKutyanev(kutyanev);
+            }
+        }
+
+        public void TorolKutyanev(Kutyanev kutyanev)
+        {
+            var valasz = MessageBox.Show("Biztosan törli?", "Törlés", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz == MessageBoxResult.OK)
+            {
+                DbRepo.TorolKutyanev(kutyanev);
+            }
+        }
+
+
     }
 }

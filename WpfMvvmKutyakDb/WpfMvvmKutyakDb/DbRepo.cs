@@ -86,7 +86,7 @@ namespace WpfMvvmKutyakDb
         {
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection())
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
                 {
                     connection.Open();
                     string updateCommand = "update kutyanevek set kutyanev=@kutyanev where Id=@id";
@@ -113,7 +113,7 @@ namespace WpfMvvmKutyakDb
         {
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection())
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
                 {
                     connection.Open();
                     string deleteCommand = "delete from kutyanevek where Id=@id";

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfMvvmKutyakDb.Mvvm.ViewModel;
 
 namespace WpfMvvmKutyakDb.Mvvm.View
 {
@@ -22,6 +23,23 @@ namespace WpfMvvmKutyakDb.Mvvm.View
         public ViewKutyanevek()
         {
             InitializeComponent();
+        }
+
+        private void buttonUjKutyanev_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as RendeloViewModel;
+            ViewKutyanevekInput kutyanevekInput = new ViewKutyanevekInput(vm);
+            kutyanevekInput.ShowDialog();
+        }
+
+        private void buttonTorolKutyanev_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as RendeloViewModel;
+            if (vm.SelectedKutyanev!=null)
+            {
+                vm.TorolKutyanev(vm.SelectedKutyanev);
+                vm.GetKutyanevek();
+            }
         }
     }
 }
