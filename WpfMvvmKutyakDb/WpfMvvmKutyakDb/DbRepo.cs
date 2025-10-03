@@ -136,6 +136,62 @@ namespace WpfMvvmKutyakDb
             }
         }
 
+        public static List<Rendeles> GetRendelesek()
+        {
+            List<Rendeles> rendelesek = new List<Rendeles>();
+
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string sqlCommand = @"select kutya.Id as Id,
+                                      fajtaid,
+                                      nevid,
+                                      eletkor,
+                                      utolsoell,
+                                      kutyanev,
+                                      nev as fajtanev
+                                      from kutya,kutyanevek,kutyafajtak
+                                      where kutya.fajtaid=kutyafajtak.Id and kutya.nevid=kutyanevek.Id";
+                    using (SQLiteCommand command = new SQLiteCommand(sqlCommand, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Rendeles rendeles = new Rendeles
+                                {
+                                    Id = Convert.ToInt32(reader["Id"]),
+                                    NevId = Convert.ToInt32(reader["nevid"]),
+                                    FajtaId = Convert.ToInt32(reader["fajtaid"]),
+                                    Eletkor = Convert.ToInt32(reader["eletkor"]),
+                                    UtolsoEll = reader["utolsoell"].ToString(),
+                                    Fajta = reader["fajtanev"].ToString(),
+                                    Nev = reader["kutyanev"].ToString()
+                                };
+                                rendelesek.Add(rendeles);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"Adatbázis hiba:{ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+            return rendelesek;
+        }
+
 
     }
 }

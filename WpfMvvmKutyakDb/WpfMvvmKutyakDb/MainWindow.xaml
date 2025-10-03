@@ -17,7 +17,7 @@
             <MenuItem Header="Adatok">
                 <MenuItem x:Name="menuitemKutyanevek" Header="Kutyanevek" Click="menuitemKutyanevek_Click"/>
                 <MenuItem Header="Kutyafajták"/>
-                <MenuItem Header="Rendelés"/>
+                <MenuItem x:Name="menuitemRendelesek" Header="Rendelés" Click="menuitemRendelesek_Click"/>
             </MenuItem>
             <MenuItem Header="Súgó"/>
 
