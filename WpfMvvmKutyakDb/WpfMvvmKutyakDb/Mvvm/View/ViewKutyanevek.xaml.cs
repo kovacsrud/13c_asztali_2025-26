@@ -35,11 +35,21 @@ namespace WpfMvvmKutyakDb.Mvvm.View
         private void buttonTorolKutyanev_Click(object sender, RoutedEventArgs e)
         {
             var vm = DataContext as RendeloViewModel;
-            if (vm.SelectedKutyanev!=null)
+            if (vm.SelectedKutyanev.Id!=0)
             {
                 vm.TorolKutyanev(vm.SelectedKutyanev);
                 vm.GetKutyanevek();
+            } else
+            {
+                MessageBox.Show("Válassza ki a törölni kívánt nevet!");
             }
+        }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm = DataContext as RendeloViewModel;
+            ViewKutyanevekInput kutyanevekInput = new ViewKutyanevekInput(true,vm);
+            kutyanevekInput.ShowDialog();
         }
     }
 }

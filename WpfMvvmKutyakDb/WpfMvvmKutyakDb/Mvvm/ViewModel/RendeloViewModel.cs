@@ -13,7 +13,7 @@ namespace WpfMvvmKutyakDb.Mvvm.ViewModel
     public class RendeloViewModel
     {
         public List<Kutyanev> Kutyanevek { get; set; } = new List<Kutyanev>();
-        public Kutyanev SelectedKutyanev { get; set; } = new Kutyanev();
+        public Kutyanev SelectedKutyanev { get; set; } =new Kutyanev();
 
         public RendeloViewModel()
         {
