@@ -54,6 +54,51 @@ namespace WpfMvvmKutyakDb
             return kutyanevek;
         }
 
+        public static List<Kutyafajta> GetKutyafajtak()
+        {
+            List<Kutyafajta> kutyafajtak = new List<Kutyafajta>();
+
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string sqlCommand = "select * from kutyafajtak";
+                    using (SQLiteCommand command = new SQLiteCommand(sqlCommand, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Kutyafajta kutyafajta = new Kutyafajta
+                                {
+                                    Id = Convert.ToInt32(reader["Id"]),
+                                    Nev = reader["nev"].ToString(),
+                                    EredetiNev = reader["eredetinev"].ToString()
+                                };
+                                kutyafajtak.Add(kutyafajta);
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"Adatbázis hiba:{ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+            return kutyafajtak;
+        }
+
         public static void UjKutyanev(Kutyanev kutyanev)
         {
             try
@@ -190,6 +235,98 @@ namespace WpfMvvmKutyakDb
 
 
             return rendelesek;
+        }
+
+        public static void UjRendeles(Rendeles rendeles)
+        {
+            try
+            {
+                using (SQLiteConnection connection=new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string insertCommand = "insert into kutya (fajtaid,nevid,eletkor,utolsoell) values(@fajtaid,@nevid,@eletkor,@utolsoell)";
+                    using (SQLiteCommand command=new SQLiteCommand(insertCommand,connection))
+                    {
+                        command.Parameters.AddWithValue("@fajtaid", rendeles.FajtaId);
+                        command.Parameters.AddWithValue("@nevid", rendeles.NevId);
+                        command.Parameters.AddWithValue("@eletkor", rendeles.Eletkor);
+                        command.Parameters.AddWithValue("@utolsoell", rendeles.UtolsoEll);
+
+                        var sorok = command.ExecuteNonQuery();
+                        MessageBox.Show($"{sorok} sor beszúrva!");
+                    }
+
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"Adatbázis hiba:{ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static void ModositRendeles(Rendeles rendeles)
+        {
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string updateCommand = "update kutya set fajtaid=@fajtaid,nevid=@nevid,eletkor=@eletkor,utolsoell=@utolsoell where Id=@id";
+                    using (SQLiteCommand command = new SQLiteCommand(updateCommand, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", rendeles.Id);
+                        command.Parameters.AddWithValue("@fajtaid", rendeles.FajtaId);
+                        command.Parameters.AddWithValue("@nevid", rendeles.NevId);
+                        command.Parameters.AddWithValue("@eletkor", rendeles.Eletkor);
+                        command.Parameters.AddWithValue("@utolsoell", rendeles.UtolsoEll);
+
+                        var sorok = command.ExecuteNonQuery();
+                        MessageBox.Show($"{sorok} sor módosítva!");
+                    }
+
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"Adatbázis hiba:{ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static void TorolRendeles(Rendeles rendeles)
+        {
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(Config.connectionString))
+                {
+                    connection.Open();
+                    string deleteCommand = "delete from kutya where Id=@id";
+                    using (SQLiteCommand command = new SQLiteCommand(deleteCommand, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", rendeles.Id);
+                        
+
+                        var sorok = command.ExecuteNonQuery();
+                        MessageBox.Show($"{sorok} sor törölve!");
+                    }
+
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show($"Adatbázis hiba:{ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
