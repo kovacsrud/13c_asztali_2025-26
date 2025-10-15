@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStart.SzamolasPage"
+             Title="Számolás" BackgroundColor="{StaticResource teagreen}">
+    <VerticalStackLayout BackgroundColor="{StaticResource darkgoldenrod}" Margin="10" VerticalOptions="Center" >
+        <Label 
+            Text="Sebesség számolás" TextColor="{StaticResource darkpurple}" FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="entrySebessegKmh" />
+        <Label x:Name="labelEredmeny" FontSize="Large" HorizontalTextAlignment="Center"/>
+        <Button x:Name="buttonSzamol" Text="Számolás"  WidthRequest="150" BackgroundColor="{StaticResource davysgray}" Clicked="buttonSzamol_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
