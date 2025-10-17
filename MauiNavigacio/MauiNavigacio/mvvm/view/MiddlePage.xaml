@@ -7,7 +7,7 @@
         <Label 
             Text="MiddlePage"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"  FontSize="Large"/>
         <Button x:Name="buttonVissza" Text="Vissza" WidthRequest="200" Clicked="buttonVissza_Clicked"/>
         <Button x:Name="buttonTovabb" Text="Tovább" WidthRequest="200" Clicked="buttonTovabb_Clicked"/>
 

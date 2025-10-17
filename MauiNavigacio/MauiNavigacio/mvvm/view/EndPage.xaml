@@ -7,8 +7,10 @@
         <Label 
             Text="EndPage"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-        
+            HorizontalOptions="Center" FontSize="Large"/>
+        <Button x:Name="buttonVissza" Text="Vissza" WidthRequest="200"  Clicked="buttonVissza_Clicked"/>
+        <Button x:Name="buttonRoot" Text="Kezdőlap" WidthRequest="200" Clicked="buttonRoot_Clicked"/>
+
+
     </VerticalStackLayout>
 </ContentPage>
