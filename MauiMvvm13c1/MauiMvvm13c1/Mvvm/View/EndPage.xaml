@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiMvvm13c1.Mvvm.View.EndPage"
-             Title="EndPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="EndPage" BackgroundColor="{StaticResource sotet2}" NavigationPage.HasNavigationBar="False">
+
+    <Border VerticalOptions="Fill" Margin="10" Stroke="{StaticResource vilagos1}" StrokeThickness="3" BackgroundColor="{StaticResource sotet1}" StrokeShape="RoundRectangle 20,20,20,20">
+        <Grid RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*">
+            <Label Text="End Page" TextColor="{StaticResource vilagos3}" FontSize="Large" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="{Binding Nev.Vezeteknev}" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource vilagos3}"/>
+            <Label Text="{Binding Nev.Keresztnev}" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource vilagos3}"/>
+            <Button x:Name="buttonVissza" Margin="20" Text="Vissza" Grid.Row="4" Grid.ColumnSpan="2" Clicked="buttonVissza_Clicked" BackgroundColor="{StaticResource vilagos2}" FontAttributes="Bold" TextColor="{StaticResource sotet2}"/>
+            <Button x:Name="buttonToRoot" Margin="20" Text="Kezdőlap" Grid.Row="5" Grid.ColumnSpan="2" Clicked="buttonToRoot_Clicked" BackgroundColor="{StaticResource vilagos2}" FontAttributes="Bold" TextColor="{StaticResource sotet2}"/>
+
+
+        </Grid>
+    </Border>
+
 </ContentPage>

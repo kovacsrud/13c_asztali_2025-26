@@ -9,8 +9,8 @@
             <Label Text="Maui Mvvm" TextColor="{StaticResource vilagos3}" FontSize="Large" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
             <Label Text="Vezetéknév" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource vilagos3}"/>
             <Label Text="Keresztnév" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource vilagos3}"/>
-            <Entry Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource sotet1}" BackgroundColor="{StaticResource vilagos2}" WidthRequest="150"/>
-            <Entry Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource sotet1}" BackgroundColor="{StaticResource vilagos2}" WidthRequest="150"/>
+            <Entry Grid.Row="2" Text="{Binding Nev.Vezeteknev}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource sotet1}" BackgroundColor="{StaticResource vilagos2}" WidthRequest="150"/>
+            <Entry Grid.Row="3" Text="{Binding Nev.Keresztnev}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource sotet1}" BackgroundColor="{StaticResource vilagos2}" WidthRequest="150"/>
             <Button x:Name="buttonTovabb" Margin="20" Text="Tovább" Grid.Row="5" Grid.ColumnSpan="2" Clicked="buttonTovabb_Clicked" BackgroundColor="{StaticResource vilagos2}" FontAttributes="Bold" TextColor="{StaticResource sotet2}"/>
 
         </Grid>
