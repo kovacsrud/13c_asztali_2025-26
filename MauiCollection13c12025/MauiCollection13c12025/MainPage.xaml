@@ -18,9 +18,9 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,*,*">
-                            <Label Text="{Binding}" />
-                            <Label Text="{Binding}" Grid.Column="1"/>
-                            <Label Text="{Binding}" Grid.Column="2"/>
+                            <Label Text="{Binding Hegyseg}" />
+                            <Label Text="{Binding HegyCsucsNeve}" Grid.Column="1"/>
+                            <Label Text="{Binding Magassag}" Grid.Column="2"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
