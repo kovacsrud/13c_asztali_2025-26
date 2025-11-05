@@ -3,6 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiCollection13c12025.ListaPage"       
              Title="ListaPage">
-    
-  
+
+    <Border Margin="10"  VerticalOptions="Fill" Stroke="{StaticResource Zold3Brush}" BackgroundColor="{StaticResource Zold1}" StrokeShape="RoundRectangle 20,20,20,20">
+        <Grid RowDefinitions=".2*,.2*,.5*,.1*">
+            <Label Text="Lista nézet" FontSize="Header" FontFamily="Mistral" HorizontalOptions="Center"/>
+            
+            <CollectionView   Grid.Row="2" HorizontalOptions="Center" ItemsSource="{Binding .}" SelectionMode="Single" EmptyView="Az lista üres!">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10" Stroke="{StaticResource Zold3}" BackgroundColor="{StaticResource Zold2}" StrokeShape="RoundRectangle 5,5,5,5">
+                            <Grid ColumnDefinitions="*,*,*">
+                                <Label Margin="5" Text="{Binding Hegyseg}" />
+                                <Label Margin="5" HorizontalOptions="Center" Text="{Binding HegyCsucsNeve}" Grid.Column="1"/>
+                                <Label Margin="5" HorizontalOptions="Center" Text="{Binding Magassag}" Grid.Column="2"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+    </Border>
+
 </ContentPage>
