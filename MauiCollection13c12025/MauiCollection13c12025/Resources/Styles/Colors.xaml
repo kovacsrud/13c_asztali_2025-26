@@ -28,6 +28,18 @@
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
 
+    <Color x:Key="Zold1">#4A7C59</Color>
+    <Color x:Key="Zold2">#68B0AB</Color>
+    <Color x:Key="Zold3">#8FC0A9</Color>
+    <Color x:Key="Zold4">#C8D5B9</Color>
+    <Color x:Key="Zold5">#FAF3DD</Color>
+
+    <SolidColorBrush x:Key="Zold1Brush" Color="{StaticResource Zold1}" />
+    <SolidColorBrush x:Key="Zold2Brush" Color="{StaticResource Zold2}" />
+    <SolidColorBrush x:Key="Zold3Brush" Color="{StaticResource Zold3}" />
+    <SolidColorBrush x:Key="Zold4Brush" Color="{StaticResource Zold4}" />
+    <SolidColorBrush x:Key="Zold5Brush" Color="{StaticResource Zold5}" />
+
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
