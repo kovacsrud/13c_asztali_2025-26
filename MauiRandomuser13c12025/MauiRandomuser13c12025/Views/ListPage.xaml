@@ -21,11 +21,13 @@
                                     <Label Text="{Binding name.first}" FontSize="18" FontFamily="Nexaheavy" TextColor="White" Margin="0,0,4,0"/>
                                     <Label Text="{Binding name.last}" FontSize="18" FontFamily="Nexaheavy" TextColor="White" Margin="0,0,4,0"/>
                                 </HorizontalStackLayout>
+                              
                             </Grid>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <Button x:Name="buttonLetolt" Text="Letöltés" FontSize="20" FontFamily="Nexaheavy" Grid.Row="2" BackgroundColor="{StaticResource RuButtonBg}" Clicked="buttonLetolt_Clicked"/>
 
         </Grid>
 
