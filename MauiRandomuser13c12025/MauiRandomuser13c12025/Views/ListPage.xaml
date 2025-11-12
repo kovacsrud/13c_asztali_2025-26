@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandomuser13c12025.Views.ListPage"
-             Title="ListPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="ListPage" NavigationPage.HasNavigationBar="False" BackgroundColor="{StaticResource RuHatter}">
+
+    <Border Margin="10" VerticalOptions="Fill" Stroke="{StaticResource RuStroke}" StrokeShape="RoundRectangle 0,40,40,0">
+        <Grid RowDefinitions=".2*,.7*,.1*">
+            <Label Text="A felhasználók adatai:" TextColor="White" FontFamily="NexaHeavy" VerticalOptions="Center" HorizontalOptions="Center"/>
+            
+            <CollectionView Grid.Row="1" SelectionMode="Single" EmptyView="No users">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="2" BackgroundColor="{StaticResource RuStroke}" StrokeShape="RoundRectangle 80,80,80,80">
+                            <Grid ColumnDefinitions=".3*,.7*">
+                                <Border HorizontalOptions="Start" WidthRequest="80" StrokeShape="RoundRectangle 80,80,80,80" Margin="5">
+                                    <Image WidthRequest="80" HeightRequest="80" Source="{Binding picture.large}"/>
+                                </Border>
+                                <HorizontalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
+                                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="Nexaheavy" TextColor="White" Margin="5,0,4,0"/>
+                                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="Nexaheavy" TextColor="White" Margin="0,0,4,0"/>
+                                    <Label Text="{Binding name.last}" FontSize="18" FontFamily="Nexaheavy" TextColor="White" Margin="0,0,4,0"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+
+    </Border>
+
+
 </ContentPage>
