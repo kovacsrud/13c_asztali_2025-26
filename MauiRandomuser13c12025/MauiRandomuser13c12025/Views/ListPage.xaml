@@ -8,7 +8,7 @@
         <Grid RowDefinitions=".2*,.7*,.1*">
             <Label Text="A felhasználók adatai:" TextColor="White" FontFamily="NexaHeavy" VerticalOptions="Center" HorizontalOptions="Center"/>
             
-            <CollectionView x:Name="collectionUsers" Grid.Row="1" SelectionMode="Single" EmptyView="No users">
+            <CollectionView x:Name="collectionUsers" Grid.Row="1" SelectionMode="Single" EmptyView="No users" SelectionChanged="collectionUsers_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Margin="2" BackgroundColor="{StaticResource RuStroke}" StrokeShape="RoundRectangle 80,80,80,80">
