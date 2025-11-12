@@ -9,6 +9,6 @@ public partial class StartPage : ContentPage
 
     private void buttonStart_Clicked(object sender, EventArgs e)
     {
-
+		Navigation.PushAsync(new ListPage());
     }
 }
