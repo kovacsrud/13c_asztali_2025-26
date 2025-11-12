@@ -5,7 +5,12 @@
              Title="StartPage" NavigationPage.HasNavigationBar="False" BackgroundColor="{StaticResource RuHatter}">
 
     <Border Margin="10" VerticalOptions="Fill" Stroke="{StaticResource RuStroke}" StrokeShape="RoundRectangle 0,40,40,0">
-        
+        <Grid RowDefinitions=".3*,.6*,.1*">
+            <Label Text="RandomUser" TextColor="White" FontSize="24" FontFamily="Nexalight" HorizontalOptions="Center" VerticalOptions="End" />
+            <Label Text=".ME" TextColor="White" Grid.Row="1" FontSize="76" FontFamily="Nexaheavy" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button x:Name="buttonStart" Text="Tovább" TextColor="White" Grid.Row="2" BackgroundColor="{StaticResource RuButtonBg}" Clicked="buttonStart_Clicked"/>
+
+        </Grid>
     </Border>
     
     

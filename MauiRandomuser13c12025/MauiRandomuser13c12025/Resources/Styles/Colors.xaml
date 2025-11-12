@@ -30,7 +30,7 @@
 
     <Color x:Key="RuHatter">#666999</Color>
     <Color x:Key="RuStroke">#AAACCC</Color>
-    <Color x:Key="ButtonBg">#333333</Color>
+    <Color x:Key="RuButtonBg">#333333</Color>
     
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
