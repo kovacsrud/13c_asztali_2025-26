@@ -11,7 +11,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-            <CollectionView x:Name="collectionJegyzetek" ItemsSource="{Binding Jegyzetek}" SelectedItem="{Binding AktualisJegyzet}" EmptyView="Nincsenek jegyzetek">
+            <CollectionView x:Name="collectionJegyzetek" ItemsSource="{Binding Jegyzetek}" SelectedItem="{Binding AktualisJegyzet}" EmptyView="Nincsenek jegyzetek" SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border BackgroundColor="LightBlue" StrokeShape="RoundRectangle 5,5,5,5" Margin="5" Padding="5">
