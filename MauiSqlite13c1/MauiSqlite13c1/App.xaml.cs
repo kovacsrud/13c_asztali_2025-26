@@ -1,4 +1,6 @@
-﻿namespace MauiSqlite13c1
+﻿using MauiSqlite13c1.Mvvm.View;
+
+namespace MauiSqlite13c1
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new JegyzetView();
         }
     }
 }
