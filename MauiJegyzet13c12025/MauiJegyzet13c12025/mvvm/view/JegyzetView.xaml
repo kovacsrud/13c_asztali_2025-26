@@ -3,11 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiJegyzet13c12025.mvvm.view.JegyzetView"
              Title="JegyzetView">
+
+    <Grid RowDefinitions=".1*,.6*,.1*,.1*,.1*">
+        <Label Text="Jegyzet App" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+
+        <CollectionView Grid.Row="1"  ItemsSource="{Binding Jegyzetek}" SelectionMode="Single" SelectedItem="{Binding AktualisJegyzet}" EmptyView="Nincsenek jegyzetek!">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="LightGreen" StrokeShape="RoundRectangle 5,5,5,5" Margin="5" Padding="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Cim}" />
+                            <Label Text="{Binding Szoveg}" />
+                            <DatePicker Date="{Binding Datum}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button x:Name="buttonUj" Text="Új Jegyzet" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonUj_Clicked"/>
+        <Button x:Name="buttonModosit" Text="Módosítás" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonModosit_Clicked"/>
+        <Button x:Name="buttonTorol" Text="Törlés" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonTorol_Clicked"/>
+
+    </Grid>
     
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+  
 </ContentPage>
