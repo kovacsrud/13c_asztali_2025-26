@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiJegyzet13c12025.mvvm.model;
+using MauiJegyzet13c12025.repository;
+using Microsoft.Extensions.Logging;
 
 namespace MauiJegyzet13c12025
 {
@@ -14,6 +16,7 @@ namespace MauiJegyzet13c12025
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.Services.AddSingleton<BaseRepository<Jegyzet>>();
 
 #if DEBUG
     		builder.Logging.AddDebug();
