@@ -20,9 +20,9 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button x:Name="buttonUj" Text="Új Jegyzet" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonUj_Clicked"/>
-        <Button x:Name="buttonModosit" Text="Módosítás" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonModosit_Clicked"/>
-        <Button x:Name="buttonTorol" Text="Törlés" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonTorol_Clicked"/>
+        <Button x:Name="buttonUj" Text="Új Jegyzet" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonUj_Clicked" Grid.Row="2"/>
+        <Button x:Name="buttonModosit" Text="Módosítás" WidthRequest="150" Margin="5" FontSize="14" Clicked="buttonModosit_Clicked" Grid.Row="3"/>
+        <Button x:Name="buttonTorol" Text="Törlés" WidthRequest="150" Margin="5" FontSize="14" Command="{Binding DeleteCommand}" Grid.Row="4"/>
 
     </Grid>
     
