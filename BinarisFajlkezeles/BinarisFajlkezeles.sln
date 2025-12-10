@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarisFajlkezeles", "BinarisFajlkezeles\BinarisFajlkezeles.csproj", "{2CEF9C1A-BB5F-46B4-A36D-44EA29549B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmuveletek", "Bitmuveletek\Bitmuveletek.csproj", "{D06F1E88-7CA0-43D1-BD47-9BE6B914BCBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CEF9C1A-BB5F-46B4-A36D-44EA29549B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEF9C1A-BB5F-46B4-A36D-44EA29549B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEF9C1A-BB5F-46B4-A36D-44EA29549B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEF9C1A-BB5F-46B4-A36D-44EA29549B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06F1E88-7CA0-43D1-BD47-9BE6B914BCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06F1E88-7CA0-43D1-BD47-9BE6B914BCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06F1E88-7CA0-43D1-BD47-9BE6B914BCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06F1E88-7CA0-43D1-BD47-9BE6B914BCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A33099E-A5EA-4DBA-9F69-6A00C474E121}
+	EndGlobalSection
+EndGlobal
