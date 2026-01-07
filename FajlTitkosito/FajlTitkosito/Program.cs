@@ -95,7 +95,8 @@ namespace FajlTitkosito
                 Console.WriteLine("A jelszó nem megfelelő!");
             }
 
-
+            //Feladat: Készítsen függvényt a kódolásra ill. a dekódolásra!
+            //Titkos tipp: statikus osztály két metódussal (kódolás,dekódolás)
 
         }
     }
