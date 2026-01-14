@@ -4,6 +4,21 @@
              xmlns:local="clr-namespace:WpfKartyak"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Color x:Key="kozep">#D1CCDC</Color>
+        <Color x:Key="vilagos">#F5EDF0</Color>
+        <Color x:Key="sotetszurke">#424C55</Color>
+        <Color x:Key="sotetbarna">#3D2C2E</Color>
+        <Color x:Key="kozepbarna">#886F68</Color>
+
+        <SolidColorBrush x:Key="kozepBrush" Color="{StaticResource kozep}"/>
+        <SolidColorBrush x:Key="vilagosBrush" Color="{StaticResource vilagos}"/>
+        <SolidColorBrush x:Key="sotetszurkeBrush" Color="{StaticResource sotetszurke}"/>
+        <SolidColorBrush x:Key="sotetbarnaBrush" Color="{StaticResource sotetbarna}"/>
+        <SolidColorBrush x:Key="kozepbarnaBrush" Color="{StaticResource kozepbarna}"/>
+
+
+
+
+
     </Application.Resources>
 </Application>
