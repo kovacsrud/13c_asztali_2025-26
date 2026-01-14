@@ -14,7 +14,7 @@
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
@@ -29,15 +29,15 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle x:Name="rectHeader" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5">
+        <Rectangle x:Name="rectHeader" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" MouseDown="rectHeader_MouseDown">
             <Rectangle.Fill>
                 <SolidColorBrush Color="{StaticResource sotetszurke}" />
             </Rectangle.Fill>
         </Rectangle>
         <WrapPanel Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <fa:FontAwesome x:Name="minGomb" Icon="WindowMinimize" FontSize="40" Margin="0,5,5,0" Foreground="{StaticResource vilagosBrush}"/>
-            <fa:FontAwesome x:Name="maxGomb" Icon="WindowMaximize" FontSize="40" Margin="0,5,5,0" Foreground="{StaticResource vilagosBrush}"/>
-            <fa:FontAwesome x:Name="closeGomb" Icon="WindowClose" FontSize="40" Margin="0,5,5,0" Foreground="{StaticResource vilagosBrush}"/>
+            <fa:FontAwesome x:Name="minGomb" Icon="WindowMinimize" FontSize="40" Margin="5" Foreground="{StaticResource vilagosBrush}"  MouseDown="minGomb_MouseDown"/>
+            <fa:FontAwesome x:Name="maxGomb" Icon="WindowMaximize" FontSize="40" Margin="5" Foreground="{StaticResource vilagosBrush}" MouseDown="maxGomb_MouseDown"/>
+            <fa:FontAwesome x:Name="closeGomb" Icon="WindowClose" FontSize="40" Margin="5" Foreground="{StaticResource vilagosBrush}" MouseDown="closeGomb_MouseDown"/>
 
         </WrapPanel>
 

@@ -20,5 +20,32 @@ namespace WpfKartyak
         {
             InitializeComponent();
         }
+
+        private void minGomb_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowState=WindowState.Minimized;
+        }
+
+        private void maxGomb_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (WindowState==WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+            } else
+            {
+                WindowState = WindowState.Maximized;
+            }
+
+        }
+
+        private void closeGomb_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void rectHeader_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }
