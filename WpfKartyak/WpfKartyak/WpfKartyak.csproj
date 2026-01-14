@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="KartyaBack.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>KartyaBack.resx</DependentUpon>
+    </Compile>
     <Compile Update="Kartyak.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -17,10 +22,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="KartyaBack.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KartyaBack.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Kartyak.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Kartyak.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="mvvm\model\" />
+    <Folder Include="mvvm\viewmodel\" />
+    <Folder Include="mvvm\view\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
   </ItemGroup>
 
 </Project>
