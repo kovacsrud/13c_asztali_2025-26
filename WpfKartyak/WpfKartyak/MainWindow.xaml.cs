@@ -55,12 +55,49 @@ namespace WpfKartyak
         {
             var vm=DataContext as KartyaViewModel;
             vm.SelectedKartya = vm.GetRandomKartya();
+
+            if (vm.SelectedKartya.FeketeVagyPiros==2 && !vm.JatekVege)
+            {
+                vm.Kassza += vm.Tet;
+                if (vm.Tet>vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+                }
+            }
+
+            if (vm.SelectedKartya.FeketeVagyPiros != 2 && !vm.JatekVege)
+            {
+                vm.Kassza -= vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+                }
+            }
         }
 
         private void buttonFekete_Click(object sender, RoutedEventArgs e)
         {
             var vm = DataContext as KartyaViewModel;
             vm.SelectedKartya = vm.GetRandomKartya();
+
+            if (vm.SelectedKartya.FeketeVagyPiros == 1 && !vm.JatekVege)
+            {
+                vm.Kassza += vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+                }
+            }
+
+            if (vm.SelectedKartya.FeketeVagyPiros != 1 && !vm.JatekVege)
+            {
+                vm.Kassza -= vm.Tet;
+                if (vm.Tet > vm.Kassza)
+                {
+                    vm.Tet = vm.Kassza;
+                }
+            }
+
         }
     }
 }
