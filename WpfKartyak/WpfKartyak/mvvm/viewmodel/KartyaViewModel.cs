@@ -32,7 +32,8 @@ namespace WpfKartyak.mvvm.viewmodel
 
         public KartyaViewModel()
         {
-                
+            InitPakli();
+            SelectedHatter = Hatterek[1];
         }
 
         public void InitPakli()
