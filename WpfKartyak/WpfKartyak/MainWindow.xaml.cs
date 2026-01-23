@@ -99,5 +99,30 @@ namespace WpfKartyak
             }
 
         }
+
+        private void buttonNovel_Click(object sender, RoutedEventArgs e)
+        {
+            var vm=DataContext as KartyaViewModel;
+            if (vm.Tet < vm.Kassza)
+            {
+                vm.Tet += 100;
+            }
+        }
+
+        private void buttonCsokkent_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            if (vm.Tet<=vm.Kassza && vm.Tet>100)
+            {
+                vm.Tet -= 100;
+            }
+        }
+
+        private void buttonUjJatek_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.JatekVege= false;
+            vm.InitPakli();
+        }
     }
 }

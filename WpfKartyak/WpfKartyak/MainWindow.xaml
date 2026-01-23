@@ -34,6 +34,24 @@
                 <SolidColorBrush Color="{StaticResource sotetszurke}" />
             </Rectangle.Fill>
         </Rectangle>
+
+        <Rectangle Grid.Column="2" Grid.Row="2" RadiusX="5" RadiusY="5">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{StaticResource sotetszurke}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="3" RadiusX="5" RadiusY="5">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{StaticResource sotetszurke}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <WrapPanel Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding Tet}" FontSize="30" Foreground="{StaticResource vilagosBrush}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Width="200"/>
+            <Button Style="{DynamicResource GombStilus1}" x:Name="buttonNovel" Content="+" FontSize="20"  Width="30" Click="buttonNovel_Click"/>
+            <Button Style="{DynamicResource GombStilus1}" x:Name="buttonCsokkent" Content="-" FontSize="20"  Width="30" Click="buttonCsokkent_Click"/>
+
+        </WrapPanel>
+
         <WrapPanel Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <fa:FontAwesome x:Name="minGomb" Icon="WindowMinimize" FontSize="40" Margin="5" Foreground="{StaticResource vilagosBrush}"  MouseDown="minGomb_MouseDown"/>
             <fa:FontAwesome x:Name="maxGomb" Icon="WindowMaximize" FontSize="40" Margin="5" Foreground="{StaticResource vilagosBrush}" MouseDown="maxGomb_MouseDown"/>
@@ -43,10 +61,12 @@
 
         <Image x:Name="randomKartya" Source="{Binding SelectedKartya.KartyaKep}" Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Margin="5"/>
         <Image x:Name="kartyaBack" Source="{Binding SelectedHatter}" Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Margin="5"/>
-        <TextBlock Text="{Binding Kassza}" FontSize="30" Foreground="{StaticResource sotetszurkeBrush}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200"/>
+        <TextBlock Text="{Binding Kassza}" FontSize="30" Foreground="{StaticResource vilagosBrush}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Width="200"/>
 
         <Button Style="{DynamicResource GombStilus1}" x:Name="buttonPiros" Content="Piros" Foreground="{StaticResource vilagosBrush}" Grid.Column="2" Grid.Row="5" Width="200" Height="30" Click="buttonPiros_Click"/>
         <Button Style="{DynamicResource GombStilus1}" x:Name="buttonFekete" Content="Fekete" Foreground="{StaticResource vilagosBrush}" Grid.Column="2" Grid.Row="6" Width="200" Height="30" Click="buttonFekete_Click"/>
+
+        <Button Style="{DynamicResource GombStilus1}" x:Name="buttonUjJatek" Content="Új játék" Grid.Column="2" Grid.Row="8" Width="200" Height="30" Foreground="{StaticResource vilagosBrush}" Click="buttonUjJatek_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>
