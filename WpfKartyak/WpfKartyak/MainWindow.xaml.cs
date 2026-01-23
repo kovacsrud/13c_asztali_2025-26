@@ -22,6 +22,7 @@ namespace WpfKartyak
             InitializeComponent();
             var vm = new KartyaViewModel();
             DataContext= vm;
+            vm.EventJatekVege += JatekVege;
         }
 
         private void minGomb_MouseDown(object sender, MouseButtonEventArgs e)
@@ -123,6 +124,31 @@ namespace WpfKartyak
             var vm = DataContext as KartyaViewModel;
             vm.JatekVege= false;
             vm.InitPakli();
+            buttonFekete.IsEnabled = true;
+            buttonPiros.IsEnabled = true;
+            buttonNovel.IsEnabled = true;
+            buttonCsokkent.IsEnabled = true;
+            buttonUjJatek.Visibility = Visibility.Hidden;
+            kartyaBack.Visibility = Visibility.Visible;
+
+
         }
+
+        private void JatekVege(object sender, EventArgs e)
+        {
+            var vm = DataContext as KartyaViewModel;
+            vm.JatekVege = true;
+            buttonFekete.IsEnabled=false;
+            buttonPiros.IsEnabled=false;
+            buttonNovel.IsEnabled=false;
+            buttonCsokkent.IsEnabled=false;
+            kartyaBack.Visibility = Visibility.Hidden;
+
+            MessageBox.Show("Játék vége!");
+            buttonUjJatek.Visibility = Visibility.Visible;
+
+
+        }
+
     }
 }

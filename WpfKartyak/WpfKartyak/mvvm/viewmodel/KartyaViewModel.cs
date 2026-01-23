@@ -22,10 +22,28 @@ namespace WpfKartyak.mvvm.viewmodel
 
         public BitmapImage SelectedHatter { get; set; } = new BitmapImage();
 
-        public int Kassza { get; set; } = 1000;
+        private int kassza = 1000;
+        public int Kassza
+        {
+            get { return kassza; }
+            set
+            {
+                kassza = value;
+                if (kassza <= 0) {
+                    OnJatekVege();
+                }
+            }
+        }
         public int Tet { get; set; } = 100;
 
         public bool JatekVege { get; set; } = false;
+
+        public EventHandler EventJatekVege;
+
+        protected virtual void OnJatekVege()
+        {
+            EventJatekVege.Invoke(this, EventArgs.Empty);
+        }
 
         ResourceManager cardManager = new ResourceManager("WpfKartyak.Kartyak", Assembly.GetExecutingAssembly());
         ResourceManager cardBackManager = new ResourceManager("WpfKartyak.KartyaBack",Assembly.GetExecutingAssembly());
@@ -79,6 +97,7 @@ namespace WpfKartyak.mvvm.viewmodel
                 Pakli.RemoveAt(veletlenSzam);
             } else
             {
+                OnJatekVege();
                 JatekVege = true;
                 MessageBox.Show($"Elfogytak a kártyák! Pontszámod:{Kassza}");
             }
