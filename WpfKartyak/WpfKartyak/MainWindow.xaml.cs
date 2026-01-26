@@ -122,16 +122,21 @@ namespace WpfKartyak
         private void buttonUjJatek_Click(object sender, RoutedEventArgs e)
         {
             var vm = DataContext as KartyaViewModel;
-            vm.JatekVege= false;
+            vm.JatekVege = false;
             vm.InitPakli();
-            buttonFekete.IsEnabled = true;
-            buttonPiros.IsEnabled = true;
-            buttonNovel.IsEnabled = true;
-            buttonCsokkent.IsEnabled = true;
+            GombEngedelyezes();
             buttonUjJatek.Visibility = Visibility.Hidden;
             kartyaBack.Visibility = Visibility.Visible;
 
 
+        }
+
+        private void GombEngedelyezes()
+        {
+            buttonFekete.IsEnabled = true;
+            buttonPiros.IsEnabled = true;
+            buttonNovel.IsEnabled = true;
+            buttonCsokkent.IsEnabled = true;
         }
 
         private void JatekVege(object sender, EventArgs e)
