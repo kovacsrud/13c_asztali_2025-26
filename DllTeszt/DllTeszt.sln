@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllTeszt", "DllTeszt\DllTeszt.csproj", "{DCD69CEA-5E09-47E0-8F6B-FF1B7FA34D9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCD69CEA-5E09-47E0-8F6B-FF1B7FA34D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD69CEA-5E09-47E0-8F6B-FF1B7FA34D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD69CEA-5E09-47E0-8F6B-FF1B7FA34D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD69CEA-5E09-47E0-8F6B-FF1B7FA34D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82D4BF5D-750B-43CE-9A82-FB72E3F88B52}
+	EndGlobalSection
+EndGlobal
