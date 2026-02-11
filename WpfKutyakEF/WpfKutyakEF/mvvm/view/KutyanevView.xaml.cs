@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfKutyakEF.mvvm.viewmodel;
 
 namespace WpfKutyakEF.mvvm.view
 {
@@ -22,6 +23,12 @@ namespace WpfKutyakEF.mvvm.view
         public KutyanevView()
         {
             InitializeComponent();
+        }
+
+        private void buttonMentes_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as KutyaViewModel;
+            vm.DbMentes();
         }
     }
 }

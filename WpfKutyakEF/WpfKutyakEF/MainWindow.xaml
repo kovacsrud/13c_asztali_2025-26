@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu FontSize="16">
+            <MenuItem Header="Fájl"/>
+            <MenuItem Header="Szerkesztés"/>
+            <MenuItem Header="Adatkezelés">
+                <MenuItem x:Name="menuitemRendeles" Header="Rendelési adatok" Click="menuitemRendeles_Click"/>
+                <MenuItem x:Name="menuitemKutyanevek" Header="Kutyanevek" Click="menuitemKutyanevek_Click"/>
+                <MenuItem x:Name="menuitemKutyafajtak" Header="Kutyafajták" Click="menuitemKutyafajtak_Click"/>
+            </MenuItem>
+            <MenuItem Header="Súgó"/>
+
+        </Menu>
 
     </Grid>
 </Window>

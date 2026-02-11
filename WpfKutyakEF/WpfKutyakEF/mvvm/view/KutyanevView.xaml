@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfKutyakEF.mvvm.view"
         mc:Ignorable="d"
-        Title="KutyanevView" Height="450" Width="800">
+        Title="Kutyanevek" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Kutyanevek}" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kutyanév" Binding="{Binding Kutyanev}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="buttonMentes" Content="Mentés" Width="200" Height="30" Grid.Row="1" Click="buttonMentes_Click"/>
+
     </Grid>
 </Window>
