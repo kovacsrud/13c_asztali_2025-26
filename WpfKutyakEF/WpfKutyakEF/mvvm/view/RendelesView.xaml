@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="RendelesView" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Kutyak}" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedKutya}" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Életkor" Binding="{Binding Eletkor}"/>
+                <DataGridTextColumn Header="Utolsó ellenőrzés" Binding="{Binding Utolsoell}"/>
+                <DataGridTextColumn Header="Kutya neve" Binding="{Binding Nev.Kutyanev}" />
+                <DataGridTextColumn Header="Kutya fajtája" Binding="{Binding Fajta.Nev}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="buttonUj" Content="Új rendelési adat" Width="200" Height="30" Click="buttonUj_Click" />
+            <Button x:Name="buttonTorol" Content="Kijelölt törlése" Width="200" Height="30" Click="buttonTorol_Click" Margin="10,0,0,0"/>
+        </WrapPanel>
+
     </Grid>
 </Window>

@@ -26,6 +26,9 @@ namespace WpfKutyakEF
 
         private void menuitemRendeles_Click(object sender, RoutedEventArgs e)
         {
+            var vm = DataContext as KutyaViewModel;
+            RendelesView rendelesek = new RendelesView { DataContext=vm};
+            rendelesek.ShowDialog();
 
         }
 

@@ -23,5 +23,15 @@ namespace WpfKutyakEF.mvvm.view
         {
             InitializeComponent();
         }
+
+        private void buttonUj_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonTorol_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
