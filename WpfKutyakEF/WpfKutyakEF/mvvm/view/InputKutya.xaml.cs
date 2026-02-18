@@ -28,6 +28,7 @@ namespace WpfKutyakEF.mvvm.view
         {
             InitializeComponent();
             this.Title = "Új adat felvitele";
+            VM = vm;
             DataContext = this;
             if (modosit)
             {
