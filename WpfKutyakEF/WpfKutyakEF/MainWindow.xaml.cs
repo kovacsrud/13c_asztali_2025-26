@@ -38,7 +38,9 @@ namespace WpfKutyakEF
 
         private void menuitemKutyafajtak_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as KutyaViewModel;
+            KutyafajtaView kutyafajtak = new KutyafajtaView { DataContext = vm };
+            kutyafajtak.ShowDialog();
         }
     }
 }
