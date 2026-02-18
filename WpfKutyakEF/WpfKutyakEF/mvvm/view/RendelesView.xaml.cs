@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfKutyakEF.mvvm.viewmodel;
 
 namespace WpfKutyakEF.mvvm.view
 {
@@ -26,12 +27,27 @@ namespace WpfKutyakEF.mvvm.view
 
         private void buttonUj_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm=DataContext as KutyaViewModel;
+            InputKutya inputkutya = new InputKutya(vm);
+            inputkutya.ShowDialog();
         }
 
         private void buttonTorol_Click(object sender, RoutedEventArgs e)
         {
+            var vm = DataContext as KutyaViewModel;
+            var valasz = MessageBox.Show("Biztosan törli?", "Törlés", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (valasz==MessageBoxResult.OK && vm.SelectedKutya!=null)
+            {
+                vm.Kutyak.Remove(vm.SelectedKutya);
+                vm.DbMentes();
+            }
+        }
 
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var vm = DataContext as KutyaViewModel;
+            InputKutya inputkutya=new InputKutya(vm,true);
+            inputkutya.ShowDialog();
         }
     }
 }

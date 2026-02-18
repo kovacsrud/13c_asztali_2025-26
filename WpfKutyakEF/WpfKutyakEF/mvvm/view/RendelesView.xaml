@@ -11,7 +11,7 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Kutyak}" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedKutya}" IsReadOnly="True">
+        <DataGrid ItemsSource="{Binding Kutyak}" AutoGenerateColumns="False" ColumnWidth="*" SelectedItem="{Binding SelectedKutya}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGrid_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Életkor" Binding="{Binding Eletkor}"/>
                 <DataGridTextColumn Header="Utolsó ellenőrzés" Binding="{Binding Utolsoell}"/>
