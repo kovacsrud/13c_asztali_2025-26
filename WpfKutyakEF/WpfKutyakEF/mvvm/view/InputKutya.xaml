@@ -15,5 +15,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
+        <Button x:Name="buttonMentes" Content="Mentés" Width="200" Height="30" Click="buttonMentes_Click" Grid.Row="4"/>
+
     </Grid>
 </Window>

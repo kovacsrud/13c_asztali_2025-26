@@ -28,6 +28,24 @@ namespace WpfKutyakEF.mvvm.view
         {
             InitializeComponent();
             this.Title = "Új adat felvitele";
+            DataContext = this;
+            if (modosit)
+            {
+                AktKutya = VM.SelectedKutya;
+                this.Title = "Rendelési adat módosítása";
+            }
+        }
+
+        private void buttonMentes_Click(object sender, RoutedEventArgs e)
+        {
+            if (modosit)
+            {
+                VM.DbMentes();
+            } else
+            {
+                VM.Kutyak.Add(AktKutya);
+                VM.DbMentes();
+            }
         }
     }
 }
