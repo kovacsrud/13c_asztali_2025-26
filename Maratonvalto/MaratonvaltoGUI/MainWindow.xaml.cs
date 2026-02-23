@@ -20,5 +20,10 @@ namespace MaratonvaltoGUI
         {
             InitializeComponent();
         }
+
+        private void menuitemMegnyitas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

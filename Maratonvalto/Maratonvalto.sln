@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maratonvalto", "Maratonvalto\Maratonvalto.csproj", "{69EA06A2-0A3C-4FB6-803B-E30052ADB996}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaratonvaltoGUI", "MaratonvaltoGUI\MaratonvaltoGUI.csproj", "{AF00939F-4A66-4570-9A91-9E55B1A29E3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69EA06A2-0A3C-4FB6-803B-E30052ADB996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69EA06A2-0A3C-4FB6-803B-E30052ADB996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69EA06A2-0A3C-4FB6-803B-E30052ADB996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF00939F-4A66-4570-9A91-9E55B1A29E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF00939F-4A66-4570-9A91-9E55B1A29E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF00939F-4A66-4570-9A91-9E55B1A29E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF00939F-4A66-4570-9A91-9E55B1A29E3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
