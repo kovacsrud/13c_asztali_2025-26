@@ -65,13 +65,16 @@ namespace MaratonvaltoGUI
 
         private void buttonCsapattarsak_Click(object sender, RoutedEventArgs e)
         {
-            var csapattarsak = Eredmenyek.FindAll(x=>x.Versenyzo.Csapat==KivalasztottEredmeny.Versenyzo.Csapat);
+            
 
             if (KivalasztottEredmeny!=null)
             {
+                textblockCsapatTagok.Text = "";
+                var csapattarsak = Eredmenyek.FindAll(x => x.Versenyzo.Csapat == KivalasztottEredmeny.Versenyzo.Csapat);
+
                 foreach (var i in csapattarsak)
                 {
-                    textblockCsapatTagok.Text += $"{i.Versenyzo.Csapat} - {i.Versenyzo.Fnev} /n";
+                    textblockCsapatTagok.Text += $"{i.Versenyzo.Csapat} - {i.Versenyzo.Fnev} \n";
                 }
             } else
             {
