@@ -40,19 +40,19 @@
         <ListBox x:Name="listboxFutok" Grid.Row="3" Grid.RowSpan="10" Margin="20"/>
         <WrapPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Név" FontSize="14" />
-            <TextBox x:Name="" FontSize="14" Width="300" Height="30" Margin="5,0,5,0" />
+            <TextBox x:Name="textboxNev" FontSize="14" Width="300" Height="30" Margin="5,0,5,0" />
         </WrapPanel>
         <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Rajtszáma" FontSize="14" />
-            <TextBox FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
+            <TextBox x:Name="textboxRajtszam" FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
         </WrapPanel>
         <WrapPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Születési év és hó" FontSize="14" />
-            <TextBox FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
+            <TextBox x:Name="textboxSzulEvHo" FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
         </WrapPanel>
         <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Csapat száma" FontSize="14" />
-            <TextBox FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
+            <TextBox x:Name="textboxCsapatSzam" FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
         </WrapPanel>
         <WrapPanel Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Hányadik körben futott" FontSize="14" />
