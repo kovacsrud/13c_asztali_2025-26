@@ -49,6 +49,8 @@ namespace MaratonvaltoGUI
             var kivalasztottNev = listboxFutok.SelectedItem as string;
             var kivalasztott=Eredmenyek.Find(x=>x.Versenyzo.Fnev==kivalasztottNev);
 
+            KivalasztottEredmeny = kivalasztott;
+
             if (kivalasztott != null)
             {
                 textboxNev.Text = kivalasztott.Versenyzo.Fnev;
@@ -59,6 +61,25 @@ namespace MaratonvaltoGUI
                 textboxCsapatSzam.Text=kivalasztott.Versenyzo.Csapat.ToString();
             }
 
+        }
+
+        private void buttonCsapattarsak_Click(object sender, RoutedEventArgs e)
+        {
+            var csapattarsak = Eredmenyek.FindAll(x=>x.Versenyzo.Csapat==KivalasztottEredmeny.Versenyzo.Csapat);
+
+            if (KivalasztottEredmeny!=null)
+            {
+                foreach (var i in csapattarsak)
+                {
+                    textblockCsapatTagok.Text += $"{i.Versenyzo.Csapat} - {i.Versenyzo.Fnev} /n";
+                }
+            } else
+            {
+                MessageBox.Show("Nincs versenyző kiválasztva!");
+            }
+
+
+            
         }
     }
 }

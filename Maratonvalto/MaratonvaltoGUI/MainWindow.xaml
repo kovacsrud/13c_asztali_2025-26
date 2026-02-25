@@ -63,7 +63,7 @@
             <TextBox x:Name="textboxIdo" FontSize="14" Width="200" Height="30" Margin="5,0,0,0" />
         </WrapPanel>
 
-        <Button x:Name="buttonCsapattarsak" Content=" Csapattársak" Grid.Row="9" Grid.Column="1" Width="300" Height="30"/>
+        <Button x:Name="buttonCsapattarsak" Content=" Csapattársak" Grid.Row="9" Grid.Column="1" Width="300" Height="30" Click="buttonCsapattarsak_Click"/>
         <TextBlock x:Name="textblockCsapatTagok" Text="tttttt" FontSize="14" Grid.Row="10" Grid.Column="1" Grid.RowSpan="4" TextWrapping="Wrap" Margin="20"/>
 
 
