@@ -37,7 +37,7 @@
         <TextBlock Text="Maratonváltó versenyzői" Grid.Row="1" FontSize="20" FontWeight="ExtraBold" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Blue"/>
         <TextBlock Text="Futók listája" FontSize="14" Grid.Row="2" VerticalAlignment="Center"/>
         <TextBlock Text="Kiválasztott futó adatai" FontSize="14" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center"/>
-        <ListBox x:Name="listboxFutok" Grid.Row="3" Grid.RowSpan="10" Margin="20"/>
+        <ListBox x:Name="listboxFutok" Grid.Row="3" Grid.RowSpan="10" Margin="20"  SelectionChanged="listboxFutok_SelectionChanged"/>
         <WrapPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Név" FontSize="14" />
             <TextBox x:Name="textboxNev" FontSize="14" Width="300" Height="30" Margin="5,0,5,0" />
@@ -56,11 +56,11 @@
         </WrapPanel>
         <WrapPanel Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Hányadik körben futott" FontSize="14" />
-            <TextBox FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
+            <TextBox x:Name="textboxKor" FontSize="14" Width="200" Height="30" Margin="5,0,5,0" />
         </WrapPanel>
         <WrapPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Köridő(mp)" FontSize="14" />
-            <TextBox FontSize="14" Width="200" Height="30" Margin="5,0,0,0" />
+            <TextBox x:Name="textboxIdo" FontSize="14" Width="200" Height="30" Margin="5,0,0,0" />
         </WrapPanel>
 
         <Button x:Name="buttonCsapattarsak" Content=" Csapattársak" Grid.Row="9" Grid.Column="1" Width="300" Height="30"/>
